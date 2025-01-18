@@ -20,12 +20,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
+    <ClerkProvider
+      publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
+    >
       <html lang="en">
         <body>
-          <header>
+          <header className="fixed top-0 left-0 w-full bg-purple-800 p-4 flex justify-between items-center">
             <SignedOut>
-              <SignInButton />
+              <SignInButton mode="modal">
+                <button className="bg-white text-purple-800 px-4 py-2 rounded-lg hover:bg-purple-100 transition-colors">
+                  Sign In
+                </button>
+              </SignInButton>
             </SignedOut>
             <SignedIn>
               <UserButton />

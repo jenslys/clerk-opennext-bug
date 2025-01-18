@@ -11,5 +11,6 @@ npm create cloudflare@latest -- my-next-app --framework=next --experimental
 ## Local setup
 
 1. Fill in `.env.local`
+1. create `dev.vars` -> `echo "NEXTJS_ENV=development" > .dev.vars`
 1. `bun install`
 1. `bun run preview`

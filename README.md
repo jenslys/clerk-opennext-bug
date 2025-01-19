@@ -14,3 +14,4 @@ npm create cloudflare@latest -- my-next-app --framework=next --experimental
 1. create `dev.vars` -> `echo "NEXTJS_ENV=development" > .dev.vars`
 1. `bun install`
 1. `bun run preview`
+1. Login with clerk and try to navigate to `/protected`
